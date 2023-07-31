@@ -12,7 +12,7 @@ const Discount = () => {
                         <h1 className='font-dancing text-yellow-400 capitalize text-2xl'>upto 25% off</h1>
                         <h2 className='text-gray-50 text-bold text-4xl capitalize'>on italian, mexican, and indian cuisine</h2>
                         <p className='text-gray-50 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, suscipit iure? Vitae beatae distinctio rem.</p>
-                        <button type='button' className=' p-2 bg-yellow-400 px-4  hover:bg-yellow-500 '>Grab Your offer</button>
+                        <button type='button' className=' p-2 bg-yellow-400 px-4  hover:bg-yellow-500'>Grab Your offer</button>
                     </div>
                 </div>
             </div>
