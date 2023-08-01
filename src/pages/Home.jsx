@@ -9,6 +9,7 @@ import Display from '../Components/Display/Display';
 import MapComponent from '../Components/Maps/MapComponent';
 
 
+
 const Home = () => {
   return (
     <React.Fragment>
@@ -22,6 +23,7 @@ const Home = () => {
       <Discount/>
       <Display/>
       <MapComponent />
+      
     </React.Fragment>
   )
 }
