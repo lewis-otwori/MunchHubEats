@@ -1,35 +1,31 @@
 import React from 'react'
 import Card from './features/Card'
-import food1 from '../../images/food1.jpg'
-import food2 from '../../images/food2.jpg'
-import food3 from '../../images/food3.jpg'
-import food4 from '../../images/food4.jpg'
+import food1 from '../../images/naivas.jpeg'
+import food2 from '../../images/java.jpeg'
+import food3 from '../../images/kfc.jpeg'
+import food4 from '../../images/chickeninn.jpeg'
 
 
 const cardData = [
     {
         id: 1,
         image: food1,
-        name: 'lorem ipsum',
-        desc: 'lorem ipsum',
+        name: 'Naivas',
     },
         {
         id: 2,
         image: food2,
-        name: 'lorem ipsum',
-        desc: 'lorem ipsum',
+        name: 'Java House',
     },
         {
         id: 3,
         image: food3,
-        name: 'lorem ipsum',
-        desc: 'lorem ipsum',
+        name: 'KFC',
     },
         {
         id: 4,
         image: food4,
-        name: 'lorem ipsum',
-        desc: 'lorem ipsum',
+        name: 'chicken inn',
     },
 ]
 
@@ -44,11 +40,11 @@ const OurRestaurant = () => {
       <div className='mx-auto max-w-[1560px] py-16 px-6'>
         <div className="flex flex-col md:flex-row">
             <div className="text-2xl gap-10 flex-shrink-0">
-                <h1 className='font-dancing text-4xl text-yellow-400'>Popular Dishes Of</h1>
-                <h1 className='font-bold text-4xl'>Our Restaurant</h1>
+                <h1 className='font-dancing text-4xl text-yellow-400 capitalize'>Top restaurants and more in</h1>
+                <h1 className='font-bold text-5xl capitalize' >Kenya</h1>
             </div>
             <div className="ml-10">
-                <p className='text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ipsum sint mollitia magni quaerat amet?Commodo Sed Egestas Egestas Fringilla Phasellus Faucibus Scelerisque Eleifend Donec. Porttitor Massa Id Neque Aliquam Vestibulum Morbi Blandit Cursus Risus. Orci Ac Auctor Augue Mauris Augue Neque Gravida In Aliquam.</p>
+                <p className='text-lg '>Welcome to our delivery restaurant! We're here to satisfy your cravings with convenience and flavor, all delivered right to your doorstep. Discover a delectable array of dishes crafted with care by our skilled chefs. Whether you're in the mood for comforting classics or daring new flavors, we've got something to tantalize every taste bud.</p>
             </div>
         </div>
 

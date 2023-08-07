@@ -6,6 +6,7 @@ import Menu from '../Components/Menu/Menu';
 import UniqueDining from '../Components/UniqueDining/UniqueDining';
 import Discount from '../Components/Discount/Discount';
 import Display from '../Components/Display/Display';
+import DeliveryApp from '../Components/DeliveryApp/DeliveryApp';
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       <UniqueDining/>
       <Discount/>
       <Display/>
+      <DeliveryApp/>
     </React.Fragment>
   )
 }
