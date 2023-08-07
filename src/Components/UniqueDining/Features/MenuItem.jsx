@@ -1,5 +1,5 @@
 import React from 'react'
-import food1 from '../../../images/food1.jpg'
+// import food1 from '../../../images/food1.jpg'
 
 const MenuItem = ({menu}) => {
   return (

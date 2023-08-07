@@ -7,10 +7,10 @@ const BodyHeader = () => {
         <section className='mx-auto max-w-[1560px] px-6'>
         <div className="flex items-start relative flex-col top-96 gap-10">
             <div className='flex'>
-                <h1 className='text-7xl font-bold text-gray-50 text-center'>HOT & SPICY CHICKEN <br />VARIETIES</h1>
+                <h1 className='text-7xl font-bold text-gray-50 text-center'>Food Delivery</h1>
             </div>
                 <div className='flex'>
-                <p className='text-lg text-gray-50 font-bold'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed asperiores nesciunt inventore a doloribus omnis.</p>
+                <p className='text-lg text-gray-50 font-bold'>Savor a world of flavors at your doorstep with our delivery restaurant's exquisite offerings.</p>
 
                 </div>
 
