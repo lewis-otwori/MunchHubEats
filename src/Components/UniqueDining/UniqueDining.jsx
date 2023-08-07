@@ -56,8 +56,8 @@ const UniqueDining = () => {
        <section className='w-full relative isolate'>
             <div className='mx-auto max-w-[1560px] px-6 '>
                 <div className='flex  flex-col justify-center items-center gap-4'>
-                    <h1 className='font-dancing text-3xl text-yellow-400 capitalize'>favourite items</h1>
-                    <h2 className='font-semibold text-5xl capitalize'>for unique Dining</h2>
+                    <h1 className='font-dancing text-4xl text-yellow-400 capitalize'>our</h1>
+                    <h2 className='font-semibold text-5xl capitalize'>popular dishes</h2>
                 </div>
                 {/* menu items */}
 

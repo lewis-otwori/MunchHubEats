@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         hero: 'url(../src/images/background4.webp)',
+        map: 'url(../src/images/map01.webp)',
+
       },
       fontFamily:{
         dancing :['Dancing Script', 'cursive'],
