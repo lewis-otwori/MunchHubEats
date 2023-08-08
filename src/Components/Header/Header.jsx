@@ -17,7 +17,7 @@ const Header = () => {
     <React.Fragment>
                   {/* navbar */}
             <nav
-            className='px-6  bg-opacity-70 py-8 bg-gray-900 text-gray-50'
+            className='px-6  bg-opacity-70 py-8 bg-gray-50 text-gray-950'
             > 
                 <div className='flex items-center justify-between mx-auto max-w-[1560px]'>
                     {/* <div className='lg:flex lg:flex-1 hidden' >
@@ -41,7 +41,9 @@ const Header = () => {
 
                     <div className='flex flex-1 justify-end gap-10'>
                         <span><FaSearch className=' h-6 w-6'/></span>
+                        <Link to='/Cart'>
                         <span><FaShoppingCart className=' h-6 w-6'/></span>
+                        </Link>
                         <span>
                           <Link 
                           onClick={handleOpen}
@@ -49,7 +51,7 @@ const Header = () => {
                             
                             <CgProfile className=' h-6 w-6'/>
                           </Link>
-                          <span className={`${isOpen ? 'flex' : 'hidden'} absolute right-3 top-24`}> 
+                          <span className={`${isOpen ? 'flex' : 'hidden'} absolute z-50 right-3 top-24`}> 
                             <Registration/>
                           </span>
                         </span>

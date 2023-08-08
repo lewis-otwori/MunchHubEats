@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const BodyHeader = () => {
   return (
@@ -14,9 +15,9 @@ const BodyHeader = () => {
 
                 </div>
 
-                <button  type='button' className=' p-2 bg-yellow-400 px-4  hover:bg-yellow-500 '>
+                <Link to="our-menu"   className=' p-2 bg-yellow-400 px-4  hover:bg-yellow-500 '>
                     Order Now
-                </button>
+                </Link>
         </div>
         </section>
     </React.Fragment>
