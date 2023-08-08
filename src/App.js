@@ -1,3 +1,4 @@
+import React,{useEffect, useState} from "react";
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Layout from "./Layout/BaseLayout";
 import Home from "./pages/Home";
@@ -13,10 +14,11 @@ import OurMenu from "./Components/OurMenu/OurMenu";
 
 
 function App() {
+ 
   const router = createBrowserRouter( 
    createRoutesFromElements(
     <Route path="/" element = {<Layout/>}>
-    <Route index element= {<Home/>}/>
+    <Route index element= {<Home />}/>
     <Route path="/contact" element = {<Contact/>}/>
     <Route path="/about" element = {<About/>}/>
     <Route path="login" element = {<Login/>}/>

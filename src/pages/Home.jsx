@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect  } from 'react'
 // import Header from '../Components/Header/Header';
 import BodyHeader from '../Components/Header/BodyHeader';
 import OurRestaurant from '../Components/OurRestaurant/OurRestaurant';
@@ -10,13 +10,20 @@ import DeliveryApp from '../Components/DeliveryApp/DeliveryApp';
 
 
 const Home = () => {
+  const [data, setData] = useState([])
+   useEffect(() => {
+    fetch('http://localhost:3000/restaurants')
+    .then((r) => r.json())
+    .then((data) => setData(data))
+    
+  },[])
   return (
     <React.Fragment>
       <header className='bg-hero bg-center bg-cover bg-no-repeat h-screen w-full relative isolate  bg-black'>
         {/* <Header/> */}
         <BodyHeader/>
       </header>
-      <OurRestaurant/>
+      <OurRestaurant data = {data}/>
       <Menu/>
       <UniqueDining/>
       <Discount/>

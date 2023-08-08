@@ -1,0 +1,46 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Delicious Bites",
+      "image": "https://images.pexels.com/photos/3887985/pexels-photo-3887985.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "contact": "123-456-7890",
+      "opening_hours": "10:00 AM",
+      "closing_hours": "10:00 PM",
+      "payment_methods": ["Mpesa", "Stripe"]
+    },
+    {
+      "id": 2,
+      "name": "Gourmet Haven",
+      "image": "https://images.pexels.com/photos/323682/pexels-photo-323682.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "contact": "987-654-3210",
+      "opening_hours": "11:30 AM",
+      "closing_hours": "9:00 PM",
+      "payment_methods": ["Mpesa", "Stripe"]
+    },
+    {
+      "id": 3,
+      "name": "Sunny Side Cafe",
+      "image": "restaurant3.jpg",
+      "contact": "555-123-4567",
+      "opening_hours": "8:00 AM",
+      "closing_hours": "3:00 PM",
+      "payment_methods": ["Mpesa", "Stripe"]
+    },
+    {
+      "id": 4,
+      "name": "Pizza Paradise",
+      "image": "restaurant4.jpg",
+      "contact": "222-333-4444",
+      "opening_hours": "12:00 PM",
+      "closing_hours": "11:00 PM",
+      "payment_methods": ["Mpesa", "Stripe"]
+    }
+  ],
+
+  "menus":[
+    {
+
+    }
+  ]
+}

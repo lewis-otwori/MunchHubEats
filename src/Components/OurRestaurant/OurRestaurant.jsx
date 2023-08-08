@@ -1,37 +1,38 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import Card from './features/Card'
-import food1 from '../../images/naivas.jpeg'
-import food2 from '../../images/java.jpeg'
-import food3 from '../../images/kfc.jpeg'
-import food4 from '../../images/chickeninn.jpeg'
+
+// import food1 from '../../images/naivas.jpeg'
+// import food2 from '../../images/java.jpeg'
+// import food3 from '../../images/kfc.jpeg'
+// import food4 from '../../images/chickeninn.jpeg'
 
 
-const cardData = [
-    {
-        id: 1,
-        image: food1,
-        name: 'Naivas',
-    },
-        {
-        id: 2,
-        image: food2,
-        name: 'Java House',
-    },
-        {
-        id: 3,
-        image: food3,
-        name: 'KFC',
-    },
-        {
-        id: 4,
-        image: food4,
-        name: 'chicken inn',
-    },
-]
+// const cardData = [
+//     {
+//         id: 1,
+//         image: food1,
+//         name: 'Naivas',
+//     },
+//         {
+//         id: 2,
+//         image: food2,
+//         name: 'Java House',
+//     },
+//         {
+//         id: 3,
+//         image: food3,
+//         name: 'KFC',
+//     },
+//         {
+//         id: 4,
+//         image: food4,
+//         name: 'chicken inn',
+//     },
+// ]
 
-const OurRestaurant = () => {
+const OurRestaurant = ({data}) => {
 
-    const restaurantCard = cardData.map((data) => (
+    const restaurantCard = data.map((data) => (
         <Card data={data} key={data.id}/>
     ))
   return (
