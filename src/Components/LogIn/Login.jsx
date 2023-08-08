@@ -1,96 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react'
 
 const Login = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(username);
-    console.log(password);
-    fetch('/login', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert("Logged in successfully");
-          return response.json();
-        }
-      })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        console.log('Response:', error.response);
-      });
-  };
-
-  const logOut = (e) => {
-    e.preventDefault();
-    fetch('/logout', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(),
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert("User has been logged out");
-          return response.json();
-        }
-      })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-  };
-
   return (
-    <div className="flex items-center justify-center min-h-screen  from-indigo-600  ">
-      <div className="bg-white rounded-lg p-8 shadow-md w-96 transform hover:scale-105 transition-transform duration-300">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-6">Welcome Back!</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700">Username</label>
-            <input
-              type="text"
-              className="mt-1 block w-full bg-gray-100 border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-gray-700">Password</label>
-            <input
-              type="password"
-              className="mt-1 block w-full bg-gray-100 border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-md w-full hover:from-pink-700 hover:to-rose-700 transition-colors duration-300 transform hover:scale-105" type="submit">
-            Login
-          </button>
-        </form>
-        <p className="mt-6 text-center text-gray-600">Don't have an account? <a className="text-indigo-500 font-semibold" href="/signup">Sign Up</a></p>
-      </div>
-      <button className="bg-red-500 text-white py-3 px-6 rounded-full ml-4 transform rotate-12 hover:bg-red-600 transition-colors duration-300 hover:rotate-0" type="button" onClick={logOut}>
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-        </svg>
-      </button>
-    </div>
-  );
-};
+    <React.Fragment>
+        <div className='w-96 mx-auto py-16'>
+            <form className='border p-8'>
+                 <div class="mb-6">
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
+                    <input type="name" id="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Username" required/>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                    <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@munchhub.com" required/>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+                    <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+                </div>
+                <div class="mb-6">
+                    {/* <label for="repeat-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Repeat password</label> */}
+                    {/* <input type="password" id="repeat-password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/> */}
+                </div>
+                <div class="flex items-start mb-6">
+                    <div class="flex items-center h-5">
+                    <input id="terms" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required/>
+                    </div>
+                    <label for="terms" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a></label>
+                </div>
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register new account</button>
+            </form>
+        </div>
+    </React.Fragment>
+  )
+}
 
-export default Login;
+export default Login

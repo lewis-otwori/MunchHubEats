@@ -36,9 +36,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div
-      className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 to-pink-500"
-    >
+    <div className="flex items-center justify-center min-h-screen ">
       <div className="w-full max-w-md px-4 py-8 bg-white rounded-md shadow-lg">
         <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">
           Contact Us
@@ -90,7 +88,7 @@ const ContactUs = () => {
           </button>
         </form>
         <p className="mt-4 text-center text-gray-600">
-          If you have an account, <a className="text-indigo-700" href="/login">Login</a>
+          If you have an account, <a className="text-indigo-700" href="/login">SIGN IN</a>
         </p>
       </div>
     </div>
