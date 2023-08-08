@@ -9,6 +9,7 @@ import Display from '../Components/Display/Display';
 import DeliveryApp from '../Components/DeliveryApp/DeliveryApp';
 
 
+
 const Home = () => {
   const [data, setData] = useState([])
    useEffect(() => {
@@ -17,6 +18,7 @@ const Home = () => {
     .then((data) => setData(data))
     
   },[])
+
 
   const [menu, setMenu] = useState([])
      useEffect(() => {
