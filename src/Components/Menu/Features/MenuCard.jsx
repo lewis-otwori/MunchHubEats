@@ -1,5 +1,4 @@
 import React from 'react'
-
 const MenuCard = ({data, addToCart}) => {
   return (
     <React.Fragment>

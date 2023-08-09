@@ -5,66 +5,65 @@ import food2 from '../../images/food2.jpg'
 import food3 from '../../images/food3.jpg'
 import food4 from '../../images/food4.jpg'
 import { useCart } from '../../utils/CartContext.js'
+// const menuData = [
+//   {
+//     id: 1,
+//     name: 'chapo beans',
+//     img: food1,
+//     price: 5
 
-const menuData = [
-  {
-    id: 1,
-    name: 'chapo beans',
-    img: food1,
-    price: 5
+//   },
+//    {
+//     id: 2,
+//     name: 'ugali ndengu',
+//     img: food2,
+//     price: 5
 
-  },
-   {
-    id: 2,
-    name: 'ugali ndengu',
-    img: food2,
-    price: 5
+//   },
+//    {
+//     id: 3,
+//     name: 'Pizza',
+//     img: food3,
+//     price: 5
 
-  },
-   {
-    id: 3,
-    name: 'Pizza',
-    img: food3,
-    price: 5
+//   },
+//    {
+//     id: 4,
+//     name: 'beef',
+//     img: food4,
+//     price: 5
 
-  },
-   {
-    id: 4,
-    name: 'beef',
-    img: food4,
-    price: 5
+//   },
+//    {
+//     id: 5,
+//     name: 'mokimo',
+//     img: food3,
+//     price: 5
 
-  },
-   {
-    id: 5,
-    name: 'mokimo',
-    img: food3,
-    price: 5
+//   },
+//    {
+//     id: 6,
+//     name: 'githeri',
+//     img: food4,
+//     price: 5
 
-  },
-   {
-    id: 6,
-    name: 'githeri',
-    img: food4,
-    price: 5
+//   },
+//    {
+//     id: 7,
+//     name: 'shawarma',
+//     img: food1,
+//     price: 5
 
-  },
-   {
-    id: 7,
-    name: 'shawarma',
-    img: food1,
-    price: 5
+//   },
+//    {
+//     id: 8,
+//     name: 'choma',
+//     img: food2,
+//     price: 5
 
-  },
-   {
-    id: 8,
-    name: 'choma',
-    img: food2,
-    price: 5
+//   },
 
-  },
-
-]
+// ]
 
 const Menu = () => {
     const { cartDispatch } = useCart();

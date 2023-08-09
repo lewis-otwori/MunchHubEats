@@ -3,10 +3,11 @@ import React, {useState, useEffect  } from 'react'
 import BodyHeader from '../Components/Header/BodyHeader';
 import OurRestaurant from '../Components/OurRestaurant/OurRestaurant';
 import Menu from '../Components/Menu/Menu';
-import UniqueDining from '../Components/UniqueDining/UniqueDining';
+// import UniqueDining from '../Components/UniqueDining/UniqueDining';
 import Discount from '../Components/Discount/Discount';
 import Display from '../Components/Display/Display';
 import DeliveryApp from '../Components/DeliveryApp/DeliveryApp';
+
 
 
 const Home = () => {
@@ -17,6 +18,15 @@ const Home = () => {
     .then((data) => setData(data))
     
   },[])
+
+
+  const [menu, setMenu] = useState([])
+     useEffect(() => {
+    fetch('http://localhost:3000/menus')
+    .then((r) => r.json())
+    .then((menu) => setMenu(menu))
+    
+  },[])
   return (
     <React.Fragment>
       <header className='bg-hero bg-center bg-cover bg-no-repeat h-screen w-full relative isolate  bg-black'>
@@ -24,8 +34,8 @@ const Home = () => {
         <BodyHeader/>
       </header>
       <OurRestaurant data = {data}/>
-      <Menu/>
-      <UniqueDining/>
+      <Menu menu = {menu}/>
+      {/* <UniqueDining/> */}
       <Discount/>
       <Display/>
       <DeliveryApp/>
