@@ -1,73 +1,21 @@
 import React from 'react'
 import MenuCard from "./Features/MenuCard.jsx"
-// import food1 from '../../images/food1.jpg'
-// import food2 from '../../images/food2.jpg'
-// import food3 from '../../images/food3.jpg'
-// import food4 from '../../images/food4.jpg'
+import { useCart } from '../../utils/CartContext';
 
-// const menuData = [
-//   {
-//     id: 1,
-//     name: 'chapo beans',
-//     img: food1,
-//     price: 5
-
-//   },
-//    {
-//     id: 2,
-//     name: 'ugali ndengu',
-//     img: food2,
-//     price: 5
-
-//   },
-//    {
-//     id: 3,
-//     name: 'Pizza',
-//     img: food3,
-//     price: 5
-
-//   },
-//    {
-//     id: 4,
-//     name: 'beef',
-//     img: food4,
-//     price: 5
-
-//   },
-//    {
-//     id: 5,
-//     name: 'mokimo',
-//     img: food3,
-//     price: 5
-
-//   },
-//    {
-//     id: 6,
-//     name: 'githeri',
-//     img: food4,
-//     price: 5
-
-//   },
-//    {
-//     id: 7,
-//     name: 'shawarma',
-//     img: food1,
-//     price: 5
-
-//   },
-//    {
-//     id: 8,
-//     name: 'choma',
-//     img: food2,
-//     price: 5
-
-//   },
-
-// ]
 
 const Menu = ({menu}) => {
-  const menuCard = menu.map((data) => (
-        <MenuCard data={data} key={data.id} name = {data.menu_name} image = {data.image} price ={data.prices}/>
+  const { cartState, cartDispatch } = useCart()
+  const { cartItems } = cartState
+
+  const addToCart = item => {
+  cartDispatch ({
+    type: "ADD_TO_CART",
+    payload: item
+  })
+}
+
+  const menuData = menu.map((data) => (
+        <MenuCard data={data} key={data.menu_id} addToCart={addToCart}/>
   ))
 
   return (
@@ -80,7 +28,7 @@ const Menu = ({menu}) => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-4 gap-4">
                     
-                   {menuCard}
+                   {menuData}
                 </div>
             </div>
        </section>

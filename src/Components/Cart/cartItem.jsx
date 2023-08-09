@@ -5,18 +5,18 @@ const CartItem = ({item, incrementQuantity, decrementQuantity, removeFromCart}) 
     <React.Fragment>
       <div className='relative w-full sm:h-64  border rounded-md flex flex-col sm:flex-row'>
         <div className='h-64 sm:h-full sm:w-80'>
-          <img src={item.img} alt={item.name} className='w-full h-full object-cover rounded-lg sm:rounded-l-lg p-1'/>
+          <img src={item.image} alt={item.menu_name} className='w-full h-full object-cover rounded-lg sm:rounded-l-lg p-1'/>
         </div>
 
         <div className='p-4 w-full flex flex-col justify-around gap-2'>
           <div className='flex justify-between items-center'>
-            <h3 className='font-bold text-3xl capitalize'>{item.name}</h3>
+            <h3 className='font-bold text-3xl capitalize'>{item.menu_name}</h3>
             <button className='border p-2 rounded-md bg-yellow-400 font-semibold' onClick={() => removeFromCart(item)}>Remove Item </button>
           </div>
 
           <div className='flex gap-2'>
             <p className='font-bold mb-1'>Price: </p>
-            <h4 className='font-bold text-gray-500'>$ {item.price * item.quantity}</h4>
+            <h4 className='font-bold text-gray-500'>Ksh {item.prices * item.quantity}</h4>
           </div>
 
           <div>

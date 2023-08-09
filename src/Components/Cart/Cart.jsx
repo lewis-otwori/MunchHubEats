@@ -28,7 +28,7 @@ const Cart = () => {
   }
 
   const totalCartPrice = cartItems.reduce(
-    ( total, item ) => total + item.price * item.quantity,
+    ( total, item ) => total + item.prices * item.quantity,
     0
   )
 
@@ -48,7 +48,7 @@ const Cart = () => {
               <div className='overflow-y-scroll scrollbar-hide h-screen'>
                 <div className='flex justify-between items-center py-4'>
                     <h1 className='text-3xl font-bold text-gray-900'>Cart</h1>
-                    <p className='text-2xl font-bold'>Total Price: $ <span className='text-gray-500'>{totalCartPrice }</span></p>
+                    <p className='text-2xl font-bold'>Total Price: Ksh <span className='text-gray-500'>{totalCartPrice }</span></p>
                 </div>
 
                   <div className='flex justify-between items-center py-4 bottom-0'>
