@@ -4,6 +4,7 @@ import food1 from '../../images/food1.jpg'
 import food2 from '../../images/food2.jpg'
 import food3 from '../../images/food3.jpg'
 import food4 from '../../images/food4.jpg'
+import { useCart } from '../../utils/CartContext.js'
 
 const menuData = [
   {
@@ -66,8 +67,18 @@ const menuData = [
 ]
 
 const Menu = () => {
+    const { cartDispatch } = useCart();
+
+    const addToCart = (product) => {
+      cartDispatch({
+        type: "ADD_TO_CART",
+        payload: product,
+      });
+    };
+
+
   const menuCard = menuData.map((data) => (
-        <MenuCard data={data} key={data.id}/>
+        <MenuCard data={data} key={data.id} addToCart={addToCart}/>
   ))
 
   return (

@@ -9,6 +9,7 @@ import Sign from "./Components/Sign/Sign";
 import AddRestaurant from "./Components/AddRestaurant/AddRestaurant";
 import Cart from "./Components/Cart/Cart";
 import OurMenu from "./Components/OurMenu/OurMenu";
+import Checkout from "./pages/Checkout";
 
 
 
@@ -25,6 +26,7 @@ function App() {
     <Route path="sign" element = {<Sign/>}/>
     <Route path="addyourrestaurant" element ={<AddRestaurant/>}/>
     <Route path="cart" element = {<Cart/>}/>
+    <Route path="checkout" element = {<Checkout/>}/>
     <Route path="our-menu" element = {<OurMenu/>}/>
     </Route>
    ) 

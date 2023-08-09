@@ -33,13 +33,11 @@ const Cart = () => {
   )
 
   const handleCheckout = () => {
-    window.location.href = '/'
-    alert('Redirecting to Checkout...')
+    window.location.href = 'checkout'
   }
 
   const handleContinueShopping = () => {
     window.location.href = 'our-menu'
-    alert('Continue Shopping...')
   }
   return (
     <React.Fragment>
