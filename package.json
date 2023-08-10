@@ -3,16 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "@stripe/react-stripe-js": "^2.1.1",
-    "@stripe/stripe-js": "^2.0.0",
-=======
-    "@cloudinary/react": "^1.11.2",
-    "@cloudinary/url-gen": "^1.11.1",
->>>>>>> a47a9192e7dc367b72895842e59fba81381d91c4
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
     "cloudinary": "^1.40.0",
     "flowbite": "^1.7.0",
     "react": "^18.2.0",

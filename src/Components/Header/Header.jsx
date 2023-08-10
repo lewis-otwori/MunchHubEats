@@ -32,23 +32,11 @@ const Header = () => {
       {/* navbar */}
       <nav className="px-6  bg-opacity-70 py-8 bg-gray-50 text-gray-950">
         <div className="flex items-center justify-between mx-auto max-w-[1560px]">
-          {/* <div className='lg:flex lg:flex-1 hidden' >
-                        <ul className='flex items-center gap-4 font-bold text-xl'>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/menu">Menu</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/login">Login</a></li>
-                            <li><a href="/sign">SignUp</a></li>
-                            <li><a href="/addyourrestaurant">Add your restaurant</a></li>
-                        </ul>
-                    </div> */}
           <div className="flex lg:hidden ">
             <HiMiniBars3BottomLeft className="h-6 w-6" />
           </div>
           <div className="flex">
-            <h1 className="font-bold text-2xl lg:text-3xl">MunchHub</h1>
+            <Link to="/" className="font-bold text-2xl lg:text-3xl">MunchHub</Link>
           </div>
 
           <div className="flex flex-1 justify-end gap-8">
