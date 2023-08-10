@@ -7,8 +7,8 @@ const OurMenu = () => {
     useEffect(() => {
       fetch("http://localhost:3000/menus")
         .then((r) => r.json())
-        .then((menu) => setMenu(menu));
-    }, []);
+        .then((menu) => setMenu(menu))
+  },[])
 
   const { cartDispatch } = useCart()
 
