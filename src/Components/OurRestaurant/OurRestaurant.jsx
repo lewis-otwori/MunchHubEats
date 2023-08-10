@@ -1,10 +1,10 @@
-import React,{useEffect, useState} from 'react'
+import React from 'react'
 import Card from './features/Card'
 
 const OurRestaurant = ({data}) => {
 
-    const restaurantCard = data.map((data) => (
-        <Card data={data} key={data.id}/>
+    const restaurantCard = data.map((dat) => (
+        <Card dat={dat} key={dat.id}/>
     ))
   return (
     <React.Fragment>

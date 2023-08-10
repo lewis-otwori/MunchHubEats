@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react'
 import MenuCard from '../Menu/Features/MenuCard'
 import { useCart } from '../../utils/CartContext'
 
-
 const OurMenu = () => {
-    const [menu, setMenu] = useState([])
-     useEffect(() => {
-        fetch('http://localhost:3000/menus')
+    const [menu, setMenu] = useState([]);
+    useEffect(() => {
+      fetch("http://localhost:3000/menus")
         .then((r) => r.json())
-        .then((menu) => setMenu(menu))
-  },[])
+        .then((menu) => setMenu(menu));
+    }, []);
 
   const { cartDispatch } = useCart()
 

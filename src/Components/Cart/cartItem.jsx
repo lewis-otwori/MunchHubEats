@@ -18,6 +18,10 @@ const CartItem = ({item, incrementQuantity, decrementQuantity, removeFromCart}) 
             <p className='font-bold mb-1'>Price: </p>
             <h4 className='font-bold text-gray-500'>Ksh {item.prices * item.quantity}</h4>
           </div>
+          <div className='flex flex-col gap-1'>
+            <p className='font-bold'>Description: </p>
+            <h4 className='font-bold text-gray-500'>{item.description}</h4>
+          </div>
 
           <div>
             <p className='font-bold mb-1'>Quantity: </p>

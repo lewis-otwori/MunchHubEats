@@ -33,13 +33,11 @@ const Cart = () => {
   )
 
   const handleCheckout = () => {
-    window.location.href = '/'
-    alert('Redirecting to Checkout...')
+    window.location.href = 'checkout'
   }
 
   const handleContinueShopping = () => {
     window.location.href = 'our-menu'
-    alert('Continue Shopping...')
   }
   return (
     <React.Fragment>
@@ -63,7 +61,7 @@ const Cart = () => {
                 <div className='space-y-3'>
                   {
                     cartItems.map((item) => (
-                      <CartItem key={item.id} item={item} removeFromCart={removeFromCart} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity}/>
+                      <CartItem key={item.menu_id} item={item} removeFromCart={removeFromCart} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity}/>
                     ))
                   }
                 </div>
