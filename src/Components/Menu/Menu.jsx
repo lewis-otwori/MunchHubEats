@@ -12,7 +12,6 @@ const Menu = ( { menu }) => {
       });
     };
 
-
   const menuData = menu.map((data) => (
         <MenuCard data={data} key={data.menu_id} addToCart={addToCart}/>
   ))

@@ -22,7 +22,7 @@ const OurMenu = () => {
   }
 
       const menuCard = menu.map((data) => (
-        <MenuCard data={data} key={data.id} addToCart={addToCart}/>
+        <MenuCard data={data} key={data.menu_id} addToCart={addToCart}/>
   ))
   return (
     <React.Fragment>
