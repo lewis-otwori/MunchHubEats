@@ -11,6 +11,8 @@ const Registration = () => {
                 <Link className='text-white' to="/">Create a business account</Link>
                 <Link className='text-white' to="addyourrestaurant">Add your restaurant</Link>
                 <Link className='text-white' to="/">Sign up to deliver</Link>
+                <Link className='text-white' to="admin-panel">Admin dashboard</Link>
+
             </div>
         </div>
 

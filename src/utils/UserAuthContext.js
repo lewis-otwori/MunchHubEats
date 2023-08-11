@@ -3,20 +3,30 @@ import React, {createContext, useContext, useEffect, useState } from 'react'
 
 const UserAuthContext = createContext();
 
-const baseURL = "http://127.0.0.1:5000"
+const baseURL = "http://127.0.0.1:5955"
 
 const UserAuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
+    const [users, setUsers] = useState([])
     const [restaurants, setRestaurants] = useState([])
+    const [owners, setOwners] = useState([])
     const [loading, setIsLoading] = useState(true)
     const [isAdmin, setIsAdmin] = useState(false)
     const [authenticaated, setAuthenticaated] = useState(false)
+
 
     useEffect(() => {
         setTimeout(() => setIsLoading(false), 1000)
     }, [])
     
     // CRUD operations for managing users.
+    useEffect(() => {
+        getAllUsers()
+    }, [])
+    const getAllUsers = async () => {
+        const response = await axios.get(`${baseURL}/users`)
+        setUsers(response.data)
+    }
     const loginUser = async (userInfo) => {
         setIsLoading(true)
 
@@ -68,11 +78,53 @@ const UserAuthProvider = ({ children }) => {
         }
         setIsLoading(false)
     }
+    // CRUD operations for managing Owners
+    useEffect(() => {
+        getAllOwners()
+    }, [])
+
+    const getAllOwners = async () => {
+        setIsLoading(true)
+
+        try {
+            const response = await axios.get(`${baseURL}/owners`)
+            setOwners(response.data)
+            console.log('All Owners Fetched Successfully')
+        } catch (err) {
+            console.log("Error fetching Owners", err)
+        }
+
+    }
 
     // CRUD operations for managing restaurants.
-    const addRestaurant = (newRestaurant) => {
-        setRestaurants([...restaurants, newRestaurant])
+    const addRestaurant = async (restaurantInfo) => {
+        try {
+            const response = await axios.post(`${baseURL}/create-restaurant`, restaurantInfo)
+            console.log('Restaurant Added SuccessFully', response.data)
+            
+            if (response.status === 201) {
+                window.location.href = 'restaurants-list'
+            }
+        } catch (err) {
+            console.log("Failed to create Restaurant", err)
+        }
     };
+
+    useEffect(() => {
+        getAllRestaurants()
+    }, [])
+
+    const getAllRestaurants = async () => {
+        setIsLoading(true)
+
+        try {
+            const response = await axios.get(`${baseURL}/restaurants`)
+            setRestaurants(response.data)
+        } catch (err) {
+            console.log("Error fetching restaurants", err)
+        }
+        setIsLoading(false)
+    }
 
     const updateRestaurant = (id, updatedRestaurant) => {
         const updatedRestaurants = restaurants.map(restaurant => restaurant.id === id?{ ...restaurant, ...updatedRestaurant }: restaurant);
@@ -86,9 +138,13 @@ const UserAuthProvider = ({ children }) => {
 
     const contextData = {
         user,
+        users,
         setUser,
         authenticaated,
         restaurants,
+        owners,
+        getAllRestaurants,
+        getAllOwners,
         addRestaurant,
         updateRestaurant,
         deleteRestaurant,
