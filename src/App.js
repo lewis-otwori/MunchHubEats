@@ -28,19 +28,19 @@ function App() {
    createRoutesFromElements(
     <Route path="/" element = {<Layout/>}>
       <Route index element= {<Home />}/>
-      <Route element={<PrivateRoutes/>}>
+      <Route path="/home/*" element={<PrivateRoutes/>}>
+        <Route path="our-menu" element = {<OurMenu/>}/>
+        <Route path="cart" element = {<Cart/>}/>
+        <Route path="checkout" element = {<Checkout/>}/>
+        <Route path="admin-panel" element = {<AdminDashboard/>}>
+            <Route path="create-restaurant" element ={<AddRestaurant/>}/>
+            <Route path="restaurants-list" index element= {<RestaurantsList/>}/>
+            <Route path="owners-list" element= {<OwnersList/>}/>
+            <Route path="users-list" element= {<UsersList/>}/>
+        </Route>
       </Route>
-      <Route path="cart" element = {<Cart/>}/>
-      <Route path="our-menu" element = {<OurMenu/>}/>
-      <Route path="checkout" element = {<Checkout/>}/>
       <Route path="login" element = {<Login/>}/>
       <Route path="sign" element = {<Sign/>}/>
-      <Route path="admin-panel" element = {<AdminDashboard/>}>
-        <Route path="create-restaurant" element ={<AddRestaurant/>}/>
-        <Route path="restaurants-list" index element= {<RestaurantsList/>}/>
-        <Route path="owners-list" element= {<OwnersList/>}/>
-        <Route path="users-list" element= {<UsersList/>}/>
-      </Route>
     </Route>
    ) 
   )
