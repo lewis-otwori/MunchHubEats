@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
 
 const Profile = () => {
+
+  const [user, setUser] = useState([])
+
+     useEffect(() => {
+    fetch('http://localhost:5000/user')
+    .then((r) => r.json())
+    .then((user) => setUser(user))
+    
+  },[])
   return (
     
     
@@ -40,11 +50,11 @@ const Profile = () => {
       </div>
       <div class="text-center mt-12">
         <h3 class="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
-          Nimo Ismail
+          {user.username}
         </h3>
         <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
           <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
-          Nairobi South C
+          {user.email}
         </div>
         <div class="mb-2 text-blueGray-600 mt-10">
           <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>
