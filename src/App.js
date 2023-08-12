@@ -17,6 +17,7 @@ import AdminDashboard from "./Components/Admin/Admin-dashboard";
 import RestaurantsList from "./Components/Admin/RestaurantsList";
 import OwnersList from "./Components/Admin/OwnersList";
 import UsersList from "./Components/Admin/UsersList";
+import Profile from "./Components/Profile/Profile";
 
 
 
@@ -28,6 +29,7 @@ function App() {
    createRoutesFromElements(
     <Route path="/" element = {<Layout/>}>
       <Route index element= {<Home />}/>
+      <Route path="/profile" element={<Profile/>}/>
       <Route path="/home/*" element={<PrivateRoutes/>}>
         <Route path="our-menu" element = {<OurMenu/>}/>
         <Route path="cart" element = {<Cart/>}/>
