@@ -15,7 +15,7 @@ const Registration = () => {
               <div className='flex flex-col gap-3 w-full items-start justify-start'>
                 {
                 isAdmin && (
-                  <Link to='admin-panel' className='py-1 text-gray-50'>
+                  <Link to='home/admin-panel' className='py-1 text-gray-50'>
                   Admin Panel
                   </Link>
                 )
@@ -23,10 +23,10 @@ const Registration = () => {
           <button onClick={logoutUser} className='text-gray-50 py-1'>
             Log Out
           </button>
-          <Link to='profile' className='text-gray-50'>
+          <Link to='home/profile' className='text-gray-50'>
             Profile
           </Link>
-          <Link to='favourites' className='text-gray-50'>
+          <Link to='home/favourites' className='text-gray-50'>
             Favourites
           </Link>
         </div>

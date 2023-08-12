@@ -18,6 +18,7 @@ import RestaurantsList from "./Components/Admin/RestaurantsList";
 import OwnersList from "./Components/Admin/OwnersList";
 import UsersList from "./Components/Admin/UsersList";
 import Profile from "./Components/Profile/Profile";
+import SearchPage from "./Components/Search/SearchPage";
 
 
 
@@ -29,12 +30,13 @@ function App() {
    createRoutesFromElements(
     <Route path="/" element = {<Layout/>}>
       <Route index element= {<Home />}/>
-      <Route path="/profile" element={<Profile/>}/>
+      <Route path="search" element= {<SearchPage />}/>
       <Route path="/home/*" element={<PrivateRoutes/>}>
-        <Route path="our-menu" element = {<OurMenu/>}/>
+        <Route index path="our-menu" element = {<OurMenu/>}/>
+        <Route path="profile" element={<Profile/>}/>
         <Route path="cart" element = {<Cart/>}/>
         <Route path="checkout" element = {<Checkout/>}/>
-        <Route path="admin-panel" element = {<AdminDashboard/>}>
+        <Route path="admin-panel/*" element = {<AdminDashboard/>}>
             <Route path="create-restaurant" element ={<AddRestaurant/>}/>
             <Route path="restaurants-list" index element= {<RestaurantsList/>}/>
             <Route path="owners-list" element= {<OwnersList/>}/>

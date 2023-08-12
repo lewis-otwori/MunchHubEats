@@ -40,11 +40,10 @@ const Header = () => {
           </div>
 
           <div className="flex flex-1 justify-end gap-8">
-          <div className="flex">
-            <Link to='profile' className="font-bold text-2xl lg:text-3xl">Profile</Link>
-          </div>
             <span>
-              <FaSearch className=" h-6 w-6" />
+              <Link to='search'>
+                <FaSearch className=" h-6 w-6" />
+              </Link>
             </span>
 
             <div className="flex items-center justify-center">

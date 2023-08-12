@@ -23,7 +23,7 @@ const UserAuthProvider = ({ children }) => {
     }, [])
     const checkUserStatus = async (userInfo) => {
         try {
-            const response = await fetch("http://127.0.0.1:5000/login", {
+            const response = await fetch("/login", {
                 method:"POST",
                 headers:{
                     "Content-Type":
@@ -35,6 +35,7 @@ const UserAuthProvider = ({ children }) => {
             });
             const userDetails = response.json()
             setUser(userDetails)
+            setAuthenticaated(true)
         } catch (error) {
             
         }
@@ -47,9 +48,7 @@ const UserAuthProvider = ({ children }) => {
     }, [])
 const getAllUsers = async () => {
     try {
-        const response = await fetch(`${baseURL}/users`, {
-          mode: 'no-cors'
-        });
+        const response = await fetch(`${baseURL}/users`);
         const data = await response.json();
         setUsers(data);
         console.log(data)
@@ -62,7 +61,7 @@ const getAllUsers = async () => {
     setIsLoading(true);
 
     try{
-        const response = await fetch("http://127.0.0.1:5000/login", {
+        const response = await fetch("/login", {
                 method:"POST",
                 headers:{
                     "Content-Type":
@@ -105,7 +104,7 @@ const getAllUsers = async () => {
 const registerUser = async (userInfo, navigate) => {
     setIsLoading(true);
     try {
-        const response = await fetch("http://127.0.0.1:5000/register", {
+        const response = await fetch("/register", {
                 method:"POST",
                 headers:{
                     "Content-Type":
@@ -138,9 +137,7 @@ const getAllOwners = async () => {
     setIsLoading(true);
 
     try {
-        const response = await fetch(`${baseURL}/owners`, {
-            mode: 'no-cors'
-        });
+        const response = await fetch(`${baseURL}/owners`);
         const data = await response.json();
         setOwners(data);
         console.log('All Owners Fetched Successfully');
@@ -183,9 +180,7 @@ const getAllRestaurants = async () => {
     setIsLoading(true);
 
     try {
-        const response = await fetch(`${baseURL}/restaurants`, {
-          mode: 'no-cors'
-        });
+        const response = await fetch(`${baseURL}/restaurants`);
         const data = await response.json();
         setRestaurants(data);
     } catch (err) {
